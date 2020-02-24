@@ -8,6 +8,7 @@ Account::Account(string name, double salary, string account, double balance)
 {
     setBalance(balance);
     setNameClient(name);
+    
     setNumberAccount(account);
     setMonthSalary(salary);
     setLimit();
