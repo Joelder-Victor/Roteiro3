@@ -40,20 +40,20 @@ void Account::setBalance(double balance)
 {
     this->balance=balance;
 }
-string Account::getNameClient()
+string Account::getNameClient() const
 {
     return nameClient;
 }
-int Account::getNumberAccount()
+int Account::getNumberAccount() const
 {
     return numberAccount;
 }
-double Account::getBalance()
+double Account::getBalance() const
 {
     return balance;
 }
 
-void Account::print() 
+void Account::print() const 
 {
     cout<<"Name: "<<getNameClient()
     <<"\nAccount Number: "<<getNumberAccount()

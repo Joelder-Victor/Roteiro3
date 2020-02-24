@@ -20,11 +20,11 @@ void SavingsAccount::setYieldRate(double yield)
     this->yieldRate=yield;
 }
 
-int SavingsAccount::getVariation()
+int SavingsAccount::getVariation() const
 {
     return variation;
 }
-double SavingsAccount::getYieldRate()
+double SavingsAccount::getYieldRate() const
 {
     return yieldRate;
 }
@@ -40,7 +40,7 @@ double SavingsAccount::savingsIncome()
     }
         
 }
-void SavingsAccount::print()
+void SavingsAccount::print() const
 {
     Account::print();
     cout<<"Variation: "<<getVariation()

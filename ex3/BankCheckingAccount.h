@@ -4,7 +4,7 @@
 
 class BankCheckingAccount:public Account
 {
-private:
+protected:
     double monthSalary;
     double limit;
 public:
@@ -14,9 +14,9 @@ public:
     void setMonthSalary(double);
     void setLimit();
 
-    double getMonthSalary();
-    double getLimit();
+    double getMonthSalary() const;
+    double getLimit() const;
 
-    void print();
+    void print() const;
 };
 

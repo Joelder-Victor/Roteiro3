@@ -15,22 +15,22 @@ void BankCheckingAccount::setMonthSalary(double salary)
 
 void BankCheckingAccount::setLimit()
 {
-    this->limit=(2*getMonthSalary());
+    this->limit=2*getMonthSalary();
 }
 
 
-double BankCheckingAccount::getMonthSalary()
+double BankCheckingAccount::getMonthSalary() const
 {
     return monthSalary;
 }
 
-double BankCheckingAccount::getLimit()
+double BankCheckingAccount::getLimit() const
 {
     return limit;
 }
-void BankCheckingAccount::print()
+void BankCheckingAccount::print() const
 {
-    Account::print;
+    Account::print();
     cout<<"Salary: "<<getMonthSalary()
     <<"\nLimit: "<<getLimit()<<endl;
 }

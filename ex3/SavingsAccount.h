@@ -14,12 +14,12 @@ public:
     void setVariation(int);
     void setYieldRate(double);
 
-    int getVariation();
-    double getYieldRate();
+    int getVariation() const;
+    double getYieldRate() const;
 
     double savingsIncome();
 
-    void print();
+    void print() const;
 };
 
 

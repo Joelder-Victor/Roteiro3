@@ -7,9 +7,10 @@ private:
     /* data */
 public:
     SpecialAccount( string,int,double,double);
+    void setLimit();
     double getLimit();
 
-    void print();
+    void print() const;
 };
 
 

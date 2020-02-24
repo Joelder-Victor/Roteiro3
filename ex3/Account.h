@@ -23,13 +23,13 @@ public:
     void setNumberAccount(int);
     
 
-    string getNameClient();
-    int getNumberAccount();
-    double getBalance();
+    string getNameClient() const;
+    int getNumberAccount() const;
+    double getBalance() const;
    
     
 
-    void print();
+    virtual void print() const;
 
     
 };
