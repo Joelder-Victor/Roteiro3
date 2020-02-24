@@ -4,14 +4,11 @@
 using std::cout;
 using std::endl;
 
-Account::Account(string name, double salary, string account, double balance)
+Account::Account(string name, int account, double balance)
 {
     setBalance(balance);
     setNameClient(name);
-
     setNumberAccount(account);
-    setMonthSalary(salary);
-    setLimit();
 }
 void Account::deposit(double value)
 {
@@ -35,21 +32,9 @@ void Account::setNameClient(string name)
     strncpy(nameClient,nameValue,length);
     nameClient[length]='\0';
 }
-void Account::setMonthSalary(double salary)
+void Account::setNumberAccount(int account)
 {
-    this->monthSalary=salary;
-}
-void Account::setNumberAccount(string account)
-{
-    const char *nameValue=account.data();
-    int length=account.size();
-    length=(length==MAX?MAX-1:length);
-    strncpy(numberAccount,nameValue,length);
-    numberAccount[length]='\0';
-}
-void Account::setLimit()
-{
-    this->limit=(2*getMonthSalary());
+    this->numberAccount=account;
 }
 void Account::setBalance(double balance)
 {
@@ -59,26 +44,18 @@ string Account::getNameClient()
 {
     return nameClient;
 }
-double Account::getMonthSalary()
-{
-    return monthSalary;
-}
-string Account::getNumberAccount()
+int Account::getNumberAccount()
 {
     return numberAccount;
-}
-double Account::getLimit()
-{
-    return limit;
 }
 double Account::getBalance()
 {
     return balance;
 }
+
 void Account::print() 
 {
     cout<<"Name: "<<getNameClient()
-    <<"\nSalary: "<<getMonthSalary()
     <<"\nAccount Number: "<<getNumberAccount()
-    <<"\nLimit: "<<getLimit()<<endl;
+    <<"\nBalance: "<<getBalance()<<endl;
 }
